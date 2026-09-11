@@ -42,3 +42,6 @@ yarn-error.*
 
 # logs
 *.log
+
+# build check artifacts
+.expo-export-check/
