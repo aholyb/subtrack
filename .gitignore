@@ -45,3 +45,11 @@ yarn-error.*
 
 # build check artifacts
 .expo-export-check/
+
+# web build output
+dist/
+.serve.log
+.vercel/
+
+.vercel
+.env*

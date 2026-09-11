@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { persistStorage } from './persistStorage';
 import { randomUUID } from 'expo-crypto';
 import { Subscription, NewSubscriptionInput } from '../domain/subscription';
 import { DateString } from '../domain/date';
@@ -38,7 +38,7 @@ export const useSubscriptions = create<SubscriptionsState>()(
     }),
     {
       name: 'subtrack.subscriptions.v1',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(persistStorage),
       partialize: (s) => ({ items: s.items }),
       onRehydrateStorage: () => (state) => {
         // Повреждённая запись не должна ронять старт: стор просто останется пустым.
