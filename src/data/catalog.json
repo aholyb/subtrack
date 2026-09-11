@@ -1,0 +1,426 @@
+[
+  {
+    "id": "netflix",
+    "name": "Netflix",
+    "categoryId": "video",
+    "color": "#E50914",
+    "cancelUrl": "https://www.netflix.com/cancelplan",
+    "defaultPlans": [
+      { "name": "Standard with ads", "amountMinor": 799, "currency": "USD", "cycle": "monthly" },
+      { "name": "Standard", "amountMinor": 1799, "currency": "USD", "cycle": "monthly" },
+      { "name": "Premium", "amountMinor": 2499, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify",
+    "categoryId": "music",
+    "color": "#1DB954",
+    "cancelUrl": "https://www.spotify.com/account/subscription/",
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 1199, "currency": "USD", "cycle": "monthly" },
+      { "name": "Duo", "amountMinor": 1699, "currency": "USD", "cycle": "monthly" },
+      { "name": "Family", "amountMinor": 1999, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "youtube-premium",
+    "name": "YouTube Premium",
+    "categoryId": "video",
+    "color": "#FF0000",
+    "cancelUrl": "https://www.youtube.com/paid_memberships",
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 1399, "currency": "USD", "cycle": "monthly" },
+      { "name": "Family", "amountMinor": 2299, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "disney-plus",
+    "name": "Disney+",
+    "categoryId": "video",
+    "color": "#113CCF",
+    "cancelUrl": "https://www.disneyplus.com/account/subscription",
+    "defaultPlans": [
+      { "name": "Basic with ads", "amountMinor": 999, "currency": "USD", "cycle": "monthly" },
+      { "name": "Premium", "amountMinor": 1599, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "hbo-max",
+    "name": "HBO Max",
+    "categoryId": "video",
+    "color": "#8A2BE2",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "With ads", "amountMinor": 999, "currency": "USD", "cycle": "monthly" },
+      { "name": "Ad-free", "amountMinor": 1699, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "apple-tv-plus",
+    "name": "Apple TV+",
+    "categoryId": "video",
+    "color": "#000000",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Monthly", "amountMinor": 1299, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "amazon-prime",
+    "name": "Amazon Prime",
+    "categoryId": "video",
+    "color": "#FF9900",
+    "cancelUrl": "https://www.amazon.com/gp/primecentral",
+    "defaultPlans": [
+      { "name": "Monthly", "amountMinor": 1499, "currency": "USD", "cycle": "monthly" },
+      { "name": "Annual", "amountMinor": 13900, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "twitch",
+    "name": "Twitch",
+    "categoryId": "video",
+    "color": "#9146FF",
+    "cancelUrl": "https://www.twitch.tv/subscriptions",
+    "defaultPlans": [
+      { "name": "Tier 1", "amountMinor": 599, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "apple-music",
+    "name": "Apple Music",
+    "categoryId": "music",
+    "color": "#FA243C",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 1099, "currency": "USD", "cycle": "monthly" },
+      { "name": "Family", "amountMinor": 1699, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "deezer",
+    "name": "Deezer",
+    "categoryId": "music",
+    "color": "#A238FF",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Premium", "amountMinor": 1199, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "soundcloud",
+    "name": "SoundCloud Go+",
+    "categoryId": "music",
+    "color": "#FF5500",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Go+", "amountMinor": 1099, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "tidal",
+    "name": "Tidal",
+    "categoryId": "music",
+    "color": "#00FFFF",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 1099, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "categoryId": "ai",
+    "color": "#10A37F",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Plus", "amountMinor": 2000, "currency": "USD", "cycle": "monthly" },
+      { "name": "Pro", "amountMinor": 20000, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "categoryId": "ai",
+    "color": "#D97757",
+    "cancelUrl": "https://claude.ai/settings/billing",
+    "defaultPlans": [
+      { "name": "Pro", "amountMinor": 2000, "currency": "USD", "cycle": "monthly" },
+      { "name": "Max", "amountMinor": 10000, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "categoryId": "ai",
+    "color": "#1B1B1B",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Basic", "amountMinor": 1000, "currency": "USD", "cycle": "monthly" },
+      { "name": "Standard", "amountMinor": 3000, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "categoryId": "ai",
+    "color": "#24292F",
+    "cancelUrl": "https://github.com/settings/billing",
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 1000, "currency": "USD", "cycle": "monthly" },
+      { "name": "Individual annual", "amountMinor": 10000, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "categoryId": "ai",
+    "color": "#20808D",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Pro", "amountMinor": 2000, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "categoryId": "work",
+    "color": "#000000",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Plus", "amountMinor": 1000, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "categoryId": "work",
+    "color": "#F24E1E",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Professional", "amountMinor": 1600, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "categoryId": "work",
+    "color": "#4A154B",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Pro", "amountMinor": 875, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "categoryId": "work",
+    "color": "#5E6AD2",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Basic", "amountMinor": 800, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "adobe-cc",
+    "name": "Adobe Creative Cloud",
+    "categoryId": "work",
+    "color": "#FF0000",
+    "cancelUrl": "https://account.adobe.com/plans",
+    "defaultPlans": [
+      { "name": "All Apps", "amountMinor": 5999, "currency": "USD", "cycle": "monthly" },
+      { "name": "Photography", "amountMinor": 1999, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "microsoft-365",
+    "name": "Microsoft 365",
+    "categoryId": "work",
+    "color": "#0078D4",
+    "cancelUrl": "https://account.microsoft.com/services",
+    "defaultPlans": [
+      { "name": "Personal", "amountMinor": 999, "currency": "USD", "cycle": "monthly" },
+      { "name": "Family", "amountMinor": 1299, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "icloud",
+    "name": "iCloud+",
+    "categoryId": "cloud",
+    "color": "#3693F3",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "50 GB", "amountMinor": 99, "currency": "USD", "cycle": "monthly" },
+      { "name": "200 GB", "amountMinor": 299, "currency": "USD", "cycle": "monthly" },
+      { "name": "2 TB", "amountMinor": 999, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "google-one",
+    "name": "Google One",
+    "categoryId": "cloud",
+    "color": "#4285F4",
+    "cancelUrl": "https://one.google.com/settings",
+    "defaultPlans": [
+      { "name": "100 GB", "amountMinor": 199, "currency": "USD", "cycle": "monthly" },
+      { "name": "2 TB", "amountMinor": 999, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "dropbox",
+    "name": "Dropbox",
+    "categoryId": "cloud",
+    "color": "#0061FF",
+    "cancelUrl": "https://www.dropbox.com/account/plan",
+    "defaultPlans": [
+      { "name": "Plus", "amountMinor": 1199, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "backblaze",
+    "name": "Backblaze",
+    "categoryId": "cloud",
+    "color": "#E21E29",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Personal Backup", "amountMinor": 999, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "playstation-plus",
+    "name": "PlayStation Plus",
+    "categoryId": "games",
+    "color": "#0070D1",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Essential", "amountMinor": 999, "currency": "USD", "cycle": "monthly" },
+      { "name": "Extra", "amountMinor": 1499, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "xbox-game-pass",
+    "name": "Xbox Game Pass",
+    "categoryId": "games",
+    "color": "#107C10",
+    "cancelUrl": "https://account.microsoft.com/services",
+    "defaultPlans": [
+      { "name": "Ultimate", "amountMinor": 1999, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "nintendo-online",
+    "name": "Nintendo Switch Online",
+    "categoryId": "games",
+    "color": "#E60012",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 399, "currency": "USD", "cycle": "monthly" },
+      { "name": "Individual annual", "amountMinor": 1999, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "nyt",
+    "name": "The New York Times",
+    "categoryId": "news",
+    "color": "#000000",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "All Access", "amountMinor": 2500, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "medium",
+    "name": "Medium",
+    "categoryId": "news",
+    "color": "#000000",
+    "cancelUrl": "https://medium.com/me/settings",
+    "defaultPlans": [
+      { "name": "Member", "amountMinor": 500, "currency": "USD", "cycle": "monthly" },
+      { "name": "Member annual", "amountMinor": 5000, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "substack",
+    "name": "Substack",
+    "categoryId": "news",
+    "color": "#FF6719",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Publication", "amountMinor": 500, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "duolingo",
+    "name": "Duolingo",
+    "categoryId": "other",
+    "color": "#58CC02",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Super", "amountMinor": 1299, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "strava",
+    "name": "Strava",
+    "categoryId": "fitness",
+    "color": "#FC4C02",
+    "cancelUrl": "https://www.strava.com/settings/subscription",
+    "defaultPlans": [
+      { "name": "Subscription", "amountMinor": 1199, "currency": "USD", "cycle": "monthly" },
+      { "name": "Annual", "amountMinor": 7999, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "whoop",
+    "name": "Whoop",
+    "categoryId": "fitness",
+    "color": "#FF0026",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Annual", "amountMinor": 23900, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "calm",
+    "name": "Calm",
+    "categoryId": "fitness",
+    "color": "#2D9CDB",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Premium annual", "amountMinor": 6999, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "headspace",
+    "name": "Headspace",
+    "categoryId": "fitness",
+    "color": "#F47D31",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Monthly", "amountMinor": 1299, "currency": "USD", "cycle": "monthly" },
+      { "name": "Annual", "amountMinor": 6999, "currency": "USD", "cycle": "yearly" }
+    ]
+  },
+  {
+    "id": "nordvpn",
+    "name": "NordVPN",
+    "categoryId": "other",
+    "color": "#4687FF",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Standard", "amountMinor": 1299, "currency": "USD", "cycle": "monthly" }
+    ]
+  },
+  {
+    "id": "1password",
+    "name": "1Password",
+    "categoryId": "other",
+    "color": "#0572EC",
+    "cancelUrl": null,
+    "defaultPlans": [
+      { "name": "Individual", "amountMinor": 299, "currency": "USD", "cycle": "monthly" },
+      { "name": "Families", "amountMinor": 499, "currency": "USD", "cycle": "monthly" }
+    ]
+  }
+]
