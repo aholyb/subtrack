@@ -41,6 +41,16 @@ export default function Root({ children }: PropsWithChildren) {
   );
 }
 
+/**
+ * Безопасная зона на вебе задаётся здесь, а не через useSafeAreaInsets:
+ * библиотека измеряет её скрытым элементом уже после гидратации, поэтому при
+ * статическом рендеринге страница успевает отрисоваться с нулями, и нижние
+ * подписи уезжают под индикатор home. CSS-переменная env() доступна браузеру
+ * сразу, до любого JavaScript.
+ *
+ * Отступ забирает корневой элемент, поэтому компоненты внутри про безопасную
+ * зону на вебе не знают и не должны прибавлять её повторно.
+ */
 const BACKGROUND_STYLE = `
 html, body, #root {
   background-color: #0A0A0A;
@@ -48,5 +58,12 @@ html, body, #root {
 }
 body {
   overscroll-behavior-y: none;
+}
+#root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
 }
 `;

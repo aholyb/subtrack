@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useAppInsets } from '../../src/ui/safeArea';
 import { ColorValue } from 'react-native';
 import { theme } from '../../src/ui/theme';
 import { TabIcon, TabIconName } from '../../src/ui/TabIcon';
@@ -11,7 +11,7 @@ const icon = (name: TabIconName) =>
   };
 
 export default function TabsLayout() {
-  const insets = useSafeAreaInsets();
+  const insets = useAppInsets();
 
   return (
     <Tabs

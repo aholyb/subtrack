@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useAppInsets } from './safeArea';
 import { theme } from './theme';
 
 type Props = { title: string; subtitle?: string; children: ReactNode };
 
 export function Screen({ title, subtitle, children }: Props) {
-  const insets = useSafeAreaInsets();
+  const insets = useAppInsets();
 
   return (
     <ScrollView
