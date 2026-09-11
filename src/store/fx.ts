@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { persistStorage } from './persistStorage';
 import { FxCache, fxFreshness, isFxCacheValid } from '../domain/fx';
 import { fetchRates } from '../services/fxApi';
 
@@ -25,7 +25,7 @@ export const useFx = create<FxState>()(
     }),
     {
       name: 'subtrack.fx.v1',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(persistStorage),
       partialize: (s) => ({ cache: s.cache }),
       onRehydrateStorage: () => (state) => {
         useFx.setState({
