@@ -40,7 +40,7 @@
     "test:watch": "jest --watch",
     "typecheck": "tsc --noEmit",
     "build:web": "expo export --platform web --output-dir dist",
-    "deploy": "npm run build:web && vercel deploy dist --prod"
+    "deploy": "vercel deploy --prod"
   },
   "jest": {
     "preset": "jest-expo",

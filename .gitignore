@@ -49,3 +49,7 @@ yarn-error.*
 # web build output
 dist/
 .serve.log
+.vercel/
+
+.vercel
+.env*
