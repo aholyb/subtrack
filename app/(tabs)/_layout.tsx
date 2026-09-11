@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { useAppInsets } from '../../src/ui/safeArea';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ColorValue } from 'react-native';
 import { theme } from '../../src/ui/theme';
 import { TabIcon, TabIconName } from '../../src/ui/TabIcon';
@@ -11,7 +11,7 @@ const icon = (name: TabIconName) =>
   };
 
 export default function TabsLayout() {
-  const insets = useAppInsets();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tabs
@@ -20,17 +20,26 @@ export default function TabsLayout() {
         tabBarActiveTintColor: theme.accent,
         tabBarInactiveTintColor: theme.textDim,
         tabBarLabelPosition: 'below-icon',
-        tabBarLabelStyle: { fontSize: 11, paddingBottom: 2 },
-        tabBarIconStyle: { marginTop: 2 },
-        // Высота считается от безопасной зоны: на телефонах с индикатором
-        // home таб-бар иначе обрезает подписи, а при нехватке высоты
-        // react-navigation просто перестаёт их рисовать.
+        /*
+         * Подпись обрезалась не безопасной зоной, а флексбоксом внутри кнопки.
+         * Кнопка вкладки — это колонка с padding 5px, иконка в ней стоит
+         * flex: 0 0 auto и сжиматься не умеет, а подпись — flex: 0 1 auto и
+         * умеет. Когда высоты не хватало, флексбокс молча ужимал коробку
+         * текста до 7 пикселей при overflow: hidden вместо того, чтобы
+         * переполниться, и от букв оставалась верхняя половина.
+         *
+         * Поэтому здесь два условия сразу: flexShrink: 0 запрещает ужимать
+         * подпись, а высота бара даёт ей место. Минимум считается так:
+         * иконка 24 + строка 16 + padding кнопки 10 + padding бара 8 = 58.
+         */
+        tabBarLabelStyle: { fontSize: 11, lineHeight: 16, flexShrink: 0 },
+        tabBarIconStyle: { marginTop: 0 },
         tabBarStyle: {
           backgroundColor: theme.card,
           borderTopColor: theme.border,
-          height: 64 + insets.bottom,
-          paddingTop: 8,
-          paddingBottom: insets.bottom + 8,
+          height: 60 + insets.bottom,
+          paddingTop: 4,
+          paddingBottom: insets.bottom + 4,
         },
       }}
     >
